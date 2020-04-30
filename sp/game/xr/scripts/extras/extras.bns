@@ -1,0 +1,14 @@
+"testmap"
+{
+	"map"		"testmap"
+	//"image"		".TGA HERE"
+	"comment"	"bts asthetic styleguide"
+	"lock"		"0"
+}
+"monitor_test"
+{
+	"map"		"monitor_test"
+	//"image"		".TGA HERE"
+	"comment"	"controllable lab screen test"
+	"lock"		"0"
+}

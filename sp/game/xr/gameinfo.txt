@@ -1,0 +1,45 @@
+"GameInfo"
+{
+    game       	"Xenium Resonance"
+    title       "Xenium Resonance"
+    type        singleplayer_only
+    nodifficulty	1
+    hasportals		1
+    supportsvr		0
+
+    FileSystem
+    {
+        SteamAppId                243730	// Source Base 2013 Singleplayer AppID
+        SearchPaths
+        {
+            //Grab any content from the mod's "custom/" folder
+			game+mod            |gameinfo_path|custom/*
+            game+mod+mod_write+game_write+default_write_path        |gameinfo_path|.
+            gamebin                |gameinfo_path|bin
+            
+			//Go back one folder to "Common/" then route to "Common/Portal" from there and grab it's content
+			game                "|all_source_engine_paths|../Portal/portal/portal_english.vpk"
+			game                "|all_source_engine_paths|../Portal/portal/portal_pak.vpk"
+			game                "|all_source_engine_paths|../Portal/portal"
+            
+			//Grab the HL2, EP1, EP2 content packaged with SB2013
+            game                |all_source_engine_paths|ep2/ep2_english.vpk
+            game                |all_source_engine_paths|ep2/ep2_pak.vpk
+            game                |all_source_engine_paths|ep2
+            game                |all_source_engine_paths|episodic/ep1_english.vpk
+            game                |all_source_engine_paths|episodic/ep1_pak.vpk
+            game                |all_source_engine_paths|episodic
+            game                |all_source_engine_paths|hl2/hl2_english.vpk
+            game                |all_source_engine_paths|hl2/hl2_pak.vpk
+            game                |all_source_engine_paths|hl2/hl2_textures.vpk
+            game                |all_source_engine_paths|hl2/hl2_sound_vo_english.vpk
+            game                |all_source_engine_paths|hl2/hl2_sound_misc.vpk
+            game                |all_source_engine_paths|hl2/hl2_misc.vpk
+            game                |all_source_engine_paths|hl2
+			
+			//Grab the SB2013 engine content
+            platform            |all_source_engine_paths|platform/platform_misc.vpk
+            platform            |all_source_engine_paths|platform
+        }
+    }
+}

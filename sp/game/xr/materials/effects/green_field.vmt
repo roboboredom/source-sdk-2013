@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "effects/green_field"
+	"$additive" 1
+	"$vertexcolor" 1
+	"$vertexalpha" 1
+	"%keywords" "xr"
+}

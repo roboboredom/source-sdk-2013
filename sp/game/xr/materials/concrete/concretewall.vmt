@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "concrete/concretewall"
+	"$surfaceprop" "Concrete"
+	"%keywords" "xr"
+}

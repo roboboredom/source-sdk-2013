@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$baseTexture "models/props/emitter"
+
+	$bumpmap "models/props/emitter_normal"
+	$phong 1
+	$phongexponenttexture "models/props/emitter_exponent"
+	
+	$phongboost 2
+	$lightwarptexture "models/props/emitter_lightwarp"	
+
+	$phongfresnelranges "[1 1.5 1]"
+	$selfillum 1
+}
