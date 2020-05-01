@@ -1,5 +1,5 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
+// CONTAINS MAPBASE REF. LINE 42
 // Purpose:		Stun Stick- beating stick with a zappy end
 //
 // $NoKeywords: $

@@ -35,20 +35,24 @@ $Project
 			$File	"mapbase\c_func_clientclip.cpp"
 		}
 		
-		$Folder "HL2 DLL"
-		{
-			// Original stunstick files are conditional'd out in the HL2 VPCs
-			$File	"$SRCDIR\game\shared\hl2mp\weapon_stunstick.cpp"
-			$File	"$SRCDIR\game\shared\hl2mp\weapon_stunstick.h"
-		}
+		//$Folder "HL2 DLL"
+		//{
+		//	// Original stunstick files are conditional'd out in the HL2 VPCs
+		//	//$File	"$SRCDIR\game\shared\hl2mp\weapon_stunstick.cpp"
+		//	//$File	"$SRCDIR\game\shared\hl2mp\weapon_stunstick.h"
+		//
+		//	// USE OLD HL2 STUNSTICK INSTEAD!
+		//	$File	"$SRCDIR\game\server\hl2\weapon_stunstick.cpp"
+		//	$File	"$SRCDIR\game\server\hl2\weapon_stunstick.h"
+		//}
 		
-		$Folder	"HL2MP"
-		{
-			$Folder	"Weapons"
-			{
-				$File	"$SRCDIR\game\shared\hl2mp\weapon_slam.cpp"
-				$File	"$SRCDIR\game\shared\hl2mp\weapon_slam.h"
-			}
-		}
+		//$Folder	"HL2MP"
+		//{
+		//	$Folder	"Weapons"
+		//	{
+		//		$File	"$SRCDIR\game\shared\hl2mp\weapon_slam.cpp"
+		//		$File	"$SRCDIR\game\shared\hl2mp\weapon_slam.h"
+		//	}
+		//}
 	}
 }

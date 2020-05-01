@@ -1,5 +1,5 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-//
+// CONTAINS MAPBASE REF. LINE 7
 // Purpose: 
 //
 //=============================================================================//
