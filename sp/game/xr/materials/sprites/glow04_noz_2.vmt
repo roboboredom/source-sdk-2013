@@ -4,4 +4,5 @@
 	"$spriteorigin" "[ 0.50 0.50 ]"
 	"$basetexture" "sprites/glow04"
 	"$ignorez" "1"
+	"%keywords" "xr"
 }

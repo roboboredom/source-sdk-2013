@@ -2,4 +2,5 @@
 {
   "$baseTexture" "vgui/chapters/chapter2"
   "$vertexalpha" 1
+  "%keywords" "xr"
 }
