@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-//	SERVER_PORTAL.VPC
+//	SERVER_XR.VPC
 //
 //	Project Script
 //-----------------------------------------------------------------------------
@@ -247,8 +247,8 @@ $Project "Server (Xenium Resonance)"
 			$File	"hl2\weapon_smg1.cpp"
 			$File	"episodic\weapon_striderbuster.cpp"
 			$File	"episodic\weapon_striderbuster.h"
-			$File	"hl2\weapon_stunstick.cpp"
-			$File	"hl2\weapon_stunstick.h"
+			$File	"hl2\weapon_stunstick.cpp" [!$MAPBASE] // See server_mapbase.vpc
+			$File	"hl2\weapon_stunstick.h" [!$MAPBASE] // See server_mapbase.vpc
 
 			$Folder	"unused"
 			{

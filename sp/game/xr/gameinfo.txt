@@ -6,40 +6,97 @@
     nodifficulty	1
     hasportals		1
     supportsvr		0
-
+	GameData	"bin/portal.fgd"
+	
+	// Set this to 1 if you want to use the HL2/EP1 flashlight which runs on AUX power.
+	// This can also be overridden on a per-map basis using hl2_gamerules.
+	use_legacy_flashlight 0
+	
     FileSystem
     {
         SteamAppId                243730	// Source Base 2013 Singleplayer AppID
         SearchPaths
         {
-            //Grab any content from the mod's "custom/" folder
-			game+mod            |gameinfo_path|custom/*
-            game+mod+mod_write+game_write+default_write_path        |gameinfo_path|.
-            gamebin                |gameinfo_path|bin
-            
-			//Go back one folder to "Common/" then route to "Common/Portal" from there and grab it's content
+			// MOUNT USER CUSTOMIZATIONS (DO NOT USE!)
+			//game+mod			|gameinfo_path|custom/*
+			//game+mod			ep2/custom/*
+			//game+mod			episodic/custom/*
+			//game+mod			hl2/custom/*
+			//game+mod			|all_source_engine_paths|../Portal/portal/custom/*
+
+			// Now search loose files.  We'll set the directory containing the gameinfo.txt file
+			// as the first "mod" search path (after any user customizations).  This is also the one
+			// that's used when writing to the "mod" path.
+			game+mod+mod_write+default_write_path		|gameinfo_path|.
+			gamebin				|gameinfo_path|bin
+			
+			
+			// MOUNT PORTAL & MOD CONTENT
 			game                "|all_source_engine_paths|../Portal/portal/portal_english.vpk"
 			game                "|all_source_engine_paths|../Portal/portal/portal_pak.vpk"
 			game                "|all_source_engine_paths|../Portal/portal"
-            
-			//Grab the HL2, EP1, EP2 content packaged with SB2013
-            game                |all_source_engine_paths|ep2/ep2_english.vpk
-            game                |all_source_engine_paths|ep2/ep2_pak.vpk
-            game                |all_source_engine_paths|ep2
-            game                |all_source_engine_paths|episodic/ep1_english.vpk
-            game                |all_source_engine_paths|episodic/ep1_pak.vpk
-            game                |all_source_engine_paths|episodic
-            game                |all_source_engine_paths|hl2/hl2_english.vpk
-            game                |all_source_engine_paths|hl2/hl2_pak.vpk
-            game                |all_source_engine_paths|hl2/hl2_textures.vpk
-            game                |all_source_engine_paths|hl2/hl2_sound_vo_english.vpk
-            game                |all_source_engine_paths|hl2/hl2_sound_misc.vpk
-            game                |all_source_engine_paths|hl2/hl2_misc.vpk
-            game                |all_source_engine_paths|hl2
 			
+			// MOUNT MAPBASE CONTENT NEXT TO MOD FOLDER
+			gamebin				|gameinfo_path|../mapbase_episodic/bin
+			game+mod			|gameinfo_path|../mapbase_episodic
+			game+mod			|gameinfo_path|../mapbase_episodic/content/*
+			game+mod			|gameinfo_path|../mapbase_hl2
+			game+mod			|gameinfo_path|../mapbase_hl2/content/*
+			game+mod			|gameinfo_path|../mapbase_shared/*
+			gamebin				|gameinfo_path|../mapbase_shared/shared_misc/bin
+
+			// Now mount all of the base HL2 stuff.
+			// See a vanilla gameinfo.txt file for more information on what this stuff does.
+			game_lv				hl2/hl2_lv.vpk
+			game+mod			ep2/ep2_english.vpk
+			game+mod			ep2/ep2_pak.vpk
+			game				|all_source_engine_paths|episodic/ep1_english.vpk
+			game				|all_source_engine_paths|episodic/ep1_pak.vpk
+			game				|all_source_engine_paths|hl2/hl2_english.vpk
+			game				|all_source_engine_paths|hl2/hl2_pak.vpk
+			game				|all_source_engine_paths|hl2/hl2_textures.vpk
+			game				|all_source_engine_paths|hl2/hl2_sound_vo_english.vpk
+			game				|all_source_engine_paths|hl2/hl2_sound_misc.vpk
+			game				|all_source_engine_paths|hl2/hl2_misc.vpk
+			platform			|all_source_engine_paths|platform/platform_misc.vpk
+
+			game+game_write		ep2
+			gamebin				episodic/bin
+
+			game				|all_source_engine_paths|episodic
+			game				|all_source_engine_paths|hl2
+			platform			|all_source_engine_paths|platform
+		
+		
+			//OLD GAMEINFO VERSION =========================================================================================
+            //Grab any content from the mod's "custom/" folder
+			//game+mod            |gameinfo_path|custom/*
+            //game+mod+mod_write+game_write+default_write_path        |gameinfo_path|.
+            //gamebin             |gameinfo_path|bin
+			//
+			//Go back one folder to "Common/" then route to "Common/Portal" from there and grab it's content
+			//game                "|all_source_engine_paths|../Portal/portal/portal_english.vpk"
+			//game                "|all_source_engine_paths|../Portal/portal/portal_pak.vpk"
+			//game                "|all_source_engine_paths|../Portal/portal"
+			//
+			//Grab the HL2, EP1, EP2 content packaged with SB2013
+            //game                |all_source_engine_paths|ep2/ep2_english.vpk
+            //game                |all_source_engine_paths|ep2/ep2_pak.vpk
+            //game                |all_source_engine_paths|ep2
+            //game                |all_source_engine_paths|episodic/ep1_english.vpk
+            //game                |all_source_engine_paths|episodic/ep1_pak.vpk
+            //game                |all_source_engine_paths|episodic
+            //game                |all_source_engine_paths|hl2/hl2_english.vpk
+            //game                |all_source_engine_paths|hl2/hl2_pak.vpk
+            //game                |all_source_engine_paths|hl2/hl2_textures.vpk
+            //game                |all_source_engine_paths|hl2/hl2_sound_vo_english.vpk
+            //game                |all_source_engine_paths|hl2/hl2_sound_misc.vpk
+            //game                |all_source_engine_paths|hl2/hl2_misc.vpk
+            //game                |all_source_engine_paths|hl2
+			//
 			//Grab the SB2013 engine content
-            platform            |all_source_engine_paths|platform/platform_misc.vpk
-            platform            |all_source_engine_paths|platform
+            //platform            |all_source_engine_paths|platform/platform_misc.vpk
+            //platform            |all_source_engine_paths|platform
         }
     }
 }

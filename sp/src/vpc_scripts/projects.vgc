@@ -17,7 +17,7 @@ $Project "client"
 {
 	"game\client\client_hl2.vpc"		[($WIN32||$X360||$POSIX) && $HL2]
 	"game\client\client_episodic.vpc"	[($WIN32||$X360||$POSIX) && $EPISODIC]
-	"game\client\client_xr.vpc"		[($WIN32||$X360||$POSIX) && $XR]
+	"game\cilent\cilent_xr.vpc"		[($WIN32||$X360||$POSIX) && $XR]
 }
 
 $Project "fgdlib"

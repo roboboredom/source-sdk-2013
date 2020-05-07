@@ -1,5 +1,5 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
-// 
+//
 // Purpose: This is technically a Mapbase addition, but it's just weapon_stunstick's class declaration.
 // 			All actual changes are still nested in #ifdef MAPBASE.
 //
