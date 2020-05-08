@@ -1,1 +1,1 @@
-devtools\bin\vpc.exe /hl2 /episodic /xr +game /mksln games.sln
+devtools\bin\vpc.exe /xr +game /mksln games.sln
