@@ -32,7 +32,7 @@
 			gamebin				|gameinfo_path|bin
 			
 			
-			// MOUNT PORTAL & MOD CONTENT
+			// MOUNT PORTAL CONTENT
 			game                "|all_source_engine_paths|../Portal/portal/portal_english.vpk"
 			game                "|all_source_engine_paths|../Portal/portal/portal_pak.vpk"
 			game                "|all_source_engine_paths|../Portal/portal"
