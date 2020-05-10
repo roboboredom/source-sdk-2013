@@ -1,6 +1,5 @@
 # xenium_resonance_sdk
 source code and content for xr mod
-<p>by dawson gray, not for public use</p>
 <pre>
 BASED ON:
 https://github.com/ValveSoftware/source-sdk-2013
