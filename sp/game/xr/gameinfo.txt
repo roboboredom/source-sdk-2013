@@ -2,7 +2,7 @@
 {
     game       	"Xenium Resonance"
     title       "Xenium Resonance"
-	title2		"dev"
+
     type        singleplayer_only
     nodifficulty	1
     hasportals		1

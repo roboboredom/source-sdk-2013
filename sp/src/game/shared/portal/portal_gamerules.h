@@ -6,11 +6,7 @@
 
 #ifdef PORTAL_MP
 
-
-
 #include "portal_mp_gamerules.h" //redirect to multiplayer gamerules in multiplayer builds
-
-
 
 #else
 
@@ -103,10 +99,18 @@ private:
 //-----------------------------------------------------------------------------
 inline CPortalGameRules* PortalGameRules()
 {
+#if ( !defined( HL2_DLL ) && !defined( HL2_CLIENT_DLL ) ) || defined( HL2MP )
+	Assert( 0 );	// g_pGameRules is NOT an instance of CHalfLife2 and bad things happen
+#endif
+
 	return static_cast<CPortalGameRules*>(g_pGameRules);
 }
-
-
+/* OLD VERSION
+inline CPortalGameRules* PortalGameRules()
+{
+	return static_cast<CPortalGameRules*>(g_pGameRules);
+}
+*/
 
 #endif // PORTAL_GAMERULES_H
 #endif
